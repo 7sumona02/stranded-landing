@@ -4,13 +4,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { useMediaQuery } from '@/hooks/use-media-query'
 
-interface Tab {
-  id: string
-  title: string
-  description: string
-  imageUrl: string
-}
-
 interface TabsContextType {
   activeTab: string
   setActiveTab: (id: string) => void
@@ -68,7 +61,7 @@ export function TabItem({
     <motion.div
       className={`rounded-lg overflow-hidden mb-2 md:text-base text-sm ${
         activeTab === value
-          ? 'active border border-gray-700/50  bg-white/2 bg-black'
+          ? 'active border border-gray-700/80  bg-white/2 bg-black'
           : 'bg-transparent'
       }`}
       onClick={() => setActiveTab(value)}

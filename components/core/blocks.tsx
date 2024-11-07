@@ -1,6 +1,8 @@
 import { cn } from '@/lib/utils';
 import React, { useEffect, useState } from 'react';
 
+type ActiveDivs = Map<number, Set<number>>; // Define activeDivs as a Map
+
 function Blocks({
   activeDivs,
   divClass,
@@ -9,7 +11,7 @@ function Blocks({
   containerRef,
 }: {
   activeDivsClass?: string;
-  activeDivs?: any;
+  activeDivs?: ActiveDivs; // Updated type
   divClass?: string;
   classname?: string;
   containerRef: React.RefObject<HTMLDivElement>;
@@ -34,8 +36,7 @@ function Blocks({
                 key={rowIndex}
                 className={cn(
                   `h-[6vh] w-full border-[1px] border-[#5dcece09] ${
-                    // @ts-ignore
-                    activeDivs[columnIndex]?.has(rowIndex)
+                    activeDivs?.get(columnIndex)?.has(rowIndex)
                       ? `${activeDivsClass}`
                       : ''
                   }`,

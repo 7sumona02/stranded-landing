@@ -1,10 +1,8 @@
-import { cn } from "@/lib/utils";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./bento-grid";
 import {
   IconClipboardCopy,
   IconFileBroken,
-  IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
 

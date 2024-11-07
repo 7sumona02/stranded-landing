@@ -1,7 +1,6 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import {
-    TabDes,
   TabHeader,
   TabImage,
   TabImageContainer,
@@ -54,7 +53,7 @@ function Steps() {
               </TabItem>
             ))}
           </TabList>
-          <TabImageContainer className='md:col-span-7 p-4 bg-white/2 border border-gray-700/50 rounded-2xl'>
+          <TabImageContainer className='md:col-span-7 p-4 bg-white/2 border border-gray-700/80 rounded-2xl'>
             {tabs.map((tab, Steps) => (
               <TabImage key={Steps} value={tab.id}>
                 <img

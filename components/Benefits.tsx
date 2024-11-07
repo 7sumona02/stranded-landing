@@ -25,7 +25,7 @@ const Benefits: React.FC = () => {
 
   return (
     <div className='h-screen w-screen px-24 flex justify-center items-center'>
-      <div className='grid grid-cols-3 gap-20 bg-white/3 border border-t-gray-700/40 border-b-gray-900/50 border-x-gray-900/50 px-24 py-24 rounded-[5em]'>
+      <div className='grid grid-cols-3 gap-20 bg-white/3 border border-t-gray-700/50 border-b-gray-900/50 border-x-gray-900/50 px-24 py-24 rounded-[5em]'>
         {cardData.map((data, index) => (
           <Card key={index} title={data.title} description={data.description} />
         ))}
